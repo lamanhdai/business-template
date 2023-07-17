@@ -4,6 +4,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
   devServer: {
     port: 3000,
     open: true,
@@ -39,6 +44,20 @@ module.exports = {
       return new HtmlWebpackPlugin({
         template: `src/${page}.ejs`,
         filename: `${page}.html`
+      })
+    }),
+    ...[
+      'index',
+      'about',
+      'career',
+      'contact',
+      'news-events',
+      'partner',
+      'product',
+    ].map(page => {
+      return new HtmlWebpackPlugin({
+        template: `src/en/${page}.ejs`,
+        filename: `en/${page}.html`
       })
     }),
     new CopyWebpackPlugin({

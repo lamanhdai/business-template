@@ -159,10 +159,6 @@ footer #lang_sel_click ul ul a:visited {
   text-align: left;
 }
 
-.portfolio_main_holder .item_holder.thin_plus_only .thin_plus_only_icon {
-  font-family:
-}
-
 .masonry_gallery_item.square_big .masonry_gallery_item_inner .masonry_gallery_item_content {
   text-align: center;
 }
@@ -24263,11 +24259,7 @@ body p {
 
 .text_detail_thong_tin .wpb_wrapper ul li span {
   display: block;
-  font-size: 12px
-}
-
-.lien_he_row {
-  background-image:
+  font-size: 12px;
 }
 
 .san_pham_text h3 {
@@ -24382,7 +24374,6 @@ body p {
 .cool-timeline.white-timeline.one-sided:before {
   background-color: #ae0d14;
   background-image: -webkit-linear-gradient(top, #ae0d14 0%, #ae0d14 8%, #ae0d14 92%, #ae0d14 100%);
-  100%);
   background-image: -moz-linear-gradient(top, #ae0d14 0%, #ae0d14 8%, #ae0d14 92%, #ae0d14 100%);
   background-image: -ms-linear-gradient(top, #ae0d14 0%, #ae0d14 8%, #ae0d14 92%, #ae0d14 100%);
   width: 3px;

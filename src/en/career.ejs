@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="vi" prefix="og: http://ogp.me/ns#">
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
 
 <head>
   <meta charset="UTF-8" />
-  <title>Nghề Nghiệp</title>
+  <title>Career</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-  <meta property="og:locale" content="vi_VN" />
-  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="vi_VN" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Nghề Nghiệp" />
-  <meta property="og:url" content="nghe-nghiep" />
+  <meta property="og:title" content="Career" />
+  <meta property="og:url" content="/en/career/" />
+  <meta property="og:site_name" content="VIET-ACC" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Nghề Nghiệp" />
-  <%- include('partial/head.ejs') %>
+  <meta name="twitter:title" content="Career" />
+  <%- include('../partial/head.en.ejs') %>
+  <style id='rs-plugin-settings-inline-css' type='text/css'>
+    #rs-demo-id {}
+  </style>
   <style id='stylesheet-inline-css' type='text/css'>
-    .page-id-225.disabled_footer_top .footer_top_holder,
-    .page-id-225.disabled_footer_bottom .footer_bottom_holder {
+    .page-id-456.disabled_footer_top .footer_top_holder,
+    .page-id-456.disabled_footer_bottom .footer_bottom_holder {
       display: none;
     }
   </style>
 </head>
 
 <body data-rsssl=1
-  class="page-template-default page page-id-225  qode_grid_1200 qode-child-theme-ver- qode-theme-ver-13.8 qode-theme-vietacc disabled_footer_bottom wpb-js-composer js-comp-ver-5.4.7 vc_responsive"
+  class="page-template-default page page-id-456  qode_grid_1200 qode-child-theme-ver- qode-theme-ver-13.8 qode-theme-vietacc disabled_footer_bottom wpb-js-composer js-comp-ver-5.4.7 vc_responsive"
   itemscope itemtype="http://schema.org/WebPage">
   <div class="wrapper">
     <div class="wrapper_inner">
-      <%- include('partial/header.ejs', { page: 'nghe-nghiep', lang: 'vi', engPage: 'en/career.html' }) %>
+      <%- include('../partial/header.ejs', { page: 'nghe-nghiep', lang: 'en', viPage: '/nghe-nghiep.html' }) %>
       <div class="content ">
         <div class="content_inner  ">
           <div class="title_outer title_without_animation with_image" data-height="180">
@@ -38,7 +42,7 @@
                   <div class="container_inner clearfix">
                     <div class="title_subtitle_holder" style="padding-top:80px;">
                       <div class="title_subtitle_holder_inner">
-                        <h1><span>Nghề Nghiệp</span></h1>
+                        <h1><span>Career</span></h1>
                         <span class="separator small right"></span>
                       </div>
                     </div>
@@ -56,8 +60,8 @@
                       <div class="wpb_wrapper">
                         <div class="wpb_text_column wpb_content_element  text_lien_he">
                           <div class="wpb_wrapper">
-                            <h3 style="text-align: left;">CƠ HỘI NGHỀ NGHIỆP</h3>
-                            <p>Hiện tại chúng tôi chưa có nhu cầu tuyển dụng</p>
+                            <h3 style="text-align: left;">CAREER OPPORTUNITIES</h3>
+                            <p>We do not currently have recruitment needs</p>
                           </div>
                         </div>
                       </div>
@@ -70,10 +74,10 @@
 
         </div>
       </div>
-      <%- include('partial/footer.ejs', {lang: 'vi'}) %>
+      <%- include('../partial/footer.ejs', {lang: 'en'}) %>
     </div>
   </div>
-  <%- include('partial/bodyAssets.ejs') %>
+  <%- include('../partial/bodyAssets.en.ejs') %>
 </body>
 
 </html>
