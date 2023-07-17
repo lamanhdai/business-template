@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="12px" viewBox="0 0 17 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>email copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="VietACC_productDetail_" transform="translate(-530.000000, -25.000000)" fill="#AE0D13" fill-rule="nonzero">
+            <g id="email-copy" transform="translate(530.000000, 25.000000)">
+                <path d="M15.0078125,0 L1.9921875,0 C0.893695312,0 0,0.859021277 0,1.91489362 L0,10.0851064 C0,11.1409787 0.893695312,12 1.9921875,12 L15.0078125,12 C16.1063047,12 17,11.1409787 17,10.0851064 L17,1.91489362 C17,0.859021277 16.1063047,0 15.0078125,0 Z M15.671875,10.0851064 C15.671875,10.4370638 15.3739766,10.7234043 15.0078125,10.7234043 L1.9921875,10.7234043 C1.62602344,10.7234043 1.328125,10.4370638 1.328125,10.0851064 L1.328125,1.91489362 C1.328125,1.56293617 1.62602344,1.27659574 1.9921875,1.27659574 L15.0078125,1.27659574 C15.3739766,1.27659574 15.671875,1.56293617 15.671875,1.91489362 L15.671875,10.0851064 Z" id="Shape"></path>
+                <polygon id="Shape" points="15.1923477 1 8 5.56188548 0.807652297 1 0 1.92586627 8 7 16 1.92586627"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
