@@ -119,7 +119,7 @@ function codeAddress(data) {
 			var marker = new google.maps.Marker({
 				map: map, 
 				position: results[0].geometry.location,
-								icon:  'http://localhost/vietacc/wp-content/themes/vietacc/img/pin.png',
+								icon:  '',
 								title: data['store_title']
 			});
 			google.maps.event.addListener(marker, 'click', function() {
@@ -152,8 +152,8 @@ function showContactMap() {
 }
 
 var no_ajax_pages = [];
-var qode_root = 'http://www.viet-acc.com/';
-var theme_root = 'http://www.viet-acc.com/wp-content/themes/vietacc/';
+var qode_root = '/';
+var theme_root = '/';
 var header_style_admin = "";
 if(typeof no_ajax_obj !== 'undefined') {
 	no_ajax_pages = no_ajax_obj.no_ajax_pages;
