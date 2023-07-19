@@ -46,7 +46,12 @@ module.exports = {
       'lien-he',
       'nghe-nghiep',
       'san-pham',
-      'tin-tuc-su-kien'
+      'tin-tuc-su-kien',
+      'san-pham/nguyen-lieu-thuc-pham-my-pham',
+      'san-pham/nong-san-nguyen-lieu-tho',
+      'san-pham/phu-gia-chan-nuoi',
+      'san-pham/premix-vitamin-khoang',
+      'san-pham/san-pham-dung-cho-trang-trai'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/${page}.ejs`,
@@ -61,6 +66,11 @@ module.exports = {
       'news-events',
       'partner',
       'product',
+      'product/nguyen-lieu-thuc-pham-my-pham-en',
+      'product/nong-san-nguyen-lieu-tho-en',
+      'product/phu-gia-chan-nuoi-en',
+      'product/premix-vitamin-khoang-en',
+      'product/san-pham-dung-cho-trang-trai-en'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/en/${page}.ejs`,
