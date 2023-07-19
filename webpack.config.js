@@ -15,20 +15,27 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'public'),
-    assetModuleFilename: (pathData) => {
-      const filepath = path
-        .dirname(pathData.filename)
-        .split("/")
-        .slice(1)
-        .join("/");
-      return `${filepath}/[name][ext][query]`;
-    },
+    // use when line 34 removed
+    // assetModuleFilename: (pathData) => {
+    //   const filepath = path
+    //     .dirname(pathData.filename)
+    //     .split("/")
+    //     .slice(1)
+    //     .join("/");
+    //   return `${filepath}/[name][ext][query]`;
+    // },
   },
   module: {
     rules: [
       {
         test: /\.ejs$/i,
-        use: ['html-loader', 'template-ejs-loader'],
+        loader: 'html-loader',
+        options: {
+          sources: false,
+        },
+      },{
+        test: /\.ejs$/i,
+        loader: 'template-ejs-loader',
       }],
   },
   plugins: [

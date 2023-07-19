@@ -105,7 +105,7 @@ display: none;
 }
  .slick-loading .slick-list
 {
-background: #fff url(https://www.viet-acc.com/wp-content/themes/vietacc-child/slick/ajax-loader.gif) center center no-repeat;
+background: #fff url(../img/ajax-loader.gif) center center no-repeat;
 } @font-face
 {
 font-family: 'slick';
