@@ -757,7 +757,7 @@ footer #lang_sel_click ul ul a:visited {
     display: block !important;
     opacity: 1 !important;
     position: relative;
-    margin: 0 auto
+    margin: 0;  
   }
 
   header .q_logo img.dark,
@@ -25595,5 +25595,21 @@ body p {
 
   .nha_cung_cap_text h3 {
     font-size: 15px;
+  }
+}
+
+.company-name {
+  font-size: 10px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#f7e88a, #7a5116);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .company-name {
+    font-size: 14px;
+    margin-left: 0;
   }
 }

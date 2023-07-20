@@ -18,7 +18,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'public'),
-    // use when line 34 removed
+    // use when line 37 removed
     // assetModuleFilename: (pathData) => {
     //   const filepath = path
     //     .dirname(pathData.filename)
@@ -55,7 +55,8 @@ module.exports = {
       'san-pham/phu-gia-chan-nuoi',
       'san-pham/premix-vitamin-khoang',
       'san-pham/san-pham-dung-cho-trang-trai',
-      'bat-dong-san'
+      'bat-dong-san',
+      'tin-tuc/6-buoc-trong-lap-cong-thuc-thuc-an-chan-nuoi'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/${page}.ejs`,
