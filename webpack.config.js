@@ -51,7 +51,8 @@ module.exports = {
       'san-pham/nong-san-nguyen-lieu-tho',
       'san-pham/phu-gia-chan-nuoi',
       'san-pham/premix-vitamin-khoang',
-      'san-pham/san-pham-dung-cho-trang-trai'
+      'san-pham/san-pham-dung-cho-trang-trai',
+      'bat-dong-san'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/${page}.ejs`,
