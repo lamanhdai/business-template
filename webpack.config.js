@@ -56,7 +56,10 @@ module.exports = {
       'san-pham/premix-vitamin-khoang',
       'san-pham/san-pham-dung-cho-trang-trai',
       'bat-dong-san',
-      'tin-tuc/6-buoc-trong-lap-cong-thuc-thuc-an-chan-nuoi'
+      'tin-tuc/6-buoc-trong-lap-cong-thuc-thuc-an-chan-nuoi',
+      'tin-tuc/co-the-cat-giam-hoac-thay-the-vitamin-e-trong-thuc-an-chan-nuoi',
+      'tin-tuc/dieu-chinh-che-do-dinh-duong-cho-heo-nai',
+      'tin-tuc/kiem-soat-gia-tri-dem-trong-thuc-an-heo-con'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/${page}.ejs`,
