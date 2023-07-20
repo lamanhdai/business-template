@@ -3,7 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
+  target: 'web',
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
@@ -12,6 +13,8 @@ module.exports = {
   devServer: {
     port: 3000,
     open: true,
+    hot: false,
+    liveReload: true
   },
   output: {
     path: path.resolve(__dirname, 'public'),
