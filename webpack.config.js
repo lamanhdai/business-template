@@ -59,7 +59,8 @@ module.exports = {
       'tin-tuc/6-buoc-trong-lap-cong-thuc-thuc-an-chan-nuoi',
       'tin-tuc/co-the-cat-giam-hoac-thay-the-vitamin-e-trong-thuc-an-chan-nuoi',
       'tin-tuc/dieu-chinh-che-do-dinh-duong-cho-heo-nai',
-      'tin-tuc/kiem-soat-gia-tri-dem-trong-thuc-an-heo-con'
+      'tin-tuc/kiem-soat-gia-tri-dem-trong-thuc-an-heo-con',
+      'tin-tuc/kiem-soat-chat-luong-thuc-an-chan-nuoi'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/${page}.ejs`,
