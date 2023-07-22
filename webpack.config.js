@@ -80,7 +80,8 @@ module.exports = {
       'product/nong-san-nguyen-lieu-tho-en',
       'product/phu-gia-chan-nuoi-en',
       'product/premix-vitamin-khoang-en',
-      'product/san-pham-dung-cho-trang-trai-en'
+      'product/san-pham-dung-cho-trang-trai-en',
+      // 'project'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/en/${page}.ejs`,
