@@ -15,6 +15,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Liên Hệ - " />
   <%- include('partial/head.ejs') %>
+  <link rel="stylesheet" href="/assets/css/contact-form7-lib.css">
   <style id='stylesheet-inline-css' type='text/css'>
     .page-id-71.disabled_footer_top .footer_top_holder,
     .page-id-71.disabled_footer_bottom .footer_bottom_holder {
@@ -67,38 +68,30 @@
                           </div>
                           <div role="form" class="wpcf7" id="wpcf7-f7-p71-o1" lang="en-US" dir="ltr">
                             <div class="screen-reader-response"></div>
-                            <form action="/lien-he/#wpcf7-f7-p71-o1" method="post" class="wpcf7-form default"
-                              novalidate="novalidate">
-                              <div style="display: none;">
-                                <input type="hidden" name="_wpcf7" value="7" />
-                                <input type="hidden" name="_wpcf7_version" value="5.0.2" />
-                                <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f7-p71-o1" />
-                                <input type="hidden" name="_wpcf7_container_post" value="71" />
-                              </div>
+                            <form class="custom-contact-form">
                               <div class="contact_us">
                                 <div class="contact_col">
                                   <span class="wpcf7-form-control-wrap Name"><input type="text" name="Name" value=""
                                       size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                      aria-required="true" aria-invalid="false" placeholder="Họ và Tên" /></span>
+                                      aria-required="true" aria-invalid="false" required placeholder="Họ và Tên" /></span>
                                 </div>
                                 <div class="contact_col">
                                   <span class="wpcf7-form-control-wrap Email"><input type="email" name="Email" value=""
                                       size="40"
                                       class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                                      aria-required="true" aria-invalid="false" placeholder="Địa chỉ email" /></span>
+                                      aria-required="true" aria-invalid="false" required placeholder="Địa chỉ email" /></span>
                                 </div>
                                 <div class="contact_col">
                                   <span class="wpcf7-form-control-wrap Phone"><input type="tel" name="Phone" value=""
                                       size="40"
                                       class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel"
-                                      aria-required="true" aria-invalid="false" placeholder="Số điện thoại" /></span>
+                                      aria-required="true" aria-invalid="false" required placeholder="Số điện thoại" /></span>
                                 </div>
                                 <div class="contact_col">
                                   <span class="wpcf7-form-control-wrap Company"><input type="text" name="Company"
                                       value="" size="40"
                                       class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                      aria-required="true" aria-invalid="false" placeholder="Tên công ty" /></span>
+                                      aria-required="true" aria-invalid="false" required placeholder="Tên công ty" /></span>
                                 </div>
                                 <div class="contact_col_2">
                                   <span class="wpcf7-form-control-wrap noidung"><textarea name="noidung" cols="40"
@@ -109,7 +102,6 @@
                                   <input type="submit" value="GỬI NGAY" class="wpcf7-form-control wpcf7-submit" />
                                 </div>
                               </div>
-                              <div class="wpcf7-response-output wpcf7-display-none"></div>
                             </form>
                           </div>
                         </div>
@@ -128,7 +120,30 @@
       <%- include('partial/footer.ejs', {lang: 'vi'}) %>
     </div>
   </div>
+  <script src="/assets/js/contact-form7-lib.js" type="text/javascript"></script>
   <%- include('partial/bodyAssets.ejs') %>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    ( function( $ ) {
+      emailjs.init("b7L3OdbZdzVMynV5Z");
+      $('.custom-contact-form').on('submit', function(e) {
+        e.preventDefault();
+        if($('.custom-contact-form')[0].checkValidity()) {
+          emailjs.send('service_vt1acs9', 'template_mkibgp7', {
+            from_name: $('[name="Name"]').val(),
+            email: $('[name="Email"]').val(),
+            phone: $('[name="Phone"]').val(),
+            company: $('[name="Company"]').val(),
+            message: $('[name="noidung"]').val()
+          }, "b7L3OdbZdzVMynV5Z").then(function(response) {
+            alert('Cảm ơn bạn đã quan tâm đóng góp ý kiến công ty')
+          }, function(error) {
+            alert('Lỗi gửi tin nhắn')
+          });
+        }
+      });
+    } )( jQuery );
+ </script>
 </body>
 
 </html>

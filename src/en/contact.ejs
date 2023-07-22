@@ -66,38 +66,31 @@
                           </div>
                           <div role="form" class="wpcf7" id="wpcf7-f541-p459-o1" lang="en-US" dir="ltr">
                             <div class="screen-reader-response"></div>
-                            <form action="/en/contact/#wpcf7-f541-p459-o1" method="post" class="wpcf7-form default"
-                              novalidate="novalidate">
-                              <div style="display: none;">
-                                <input type="hidden" name="_wpcf7" value="541" />
-                                <input type="hidden" name="_wpcf7_version" value="5.0.2" />
-                                <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f541-p459-o1" />
-                                <input type="hidden" name="_wpcf7_container_post" value="459" />
-                              </div>
+                            <form class="wpcf7-form default custom-contact-form"
+                              >
                               <div class="contact_us">
                                 <div class="contact_col">
                                   <span class="wpcf7-form-control-wrap Name"><input type="text" name="Name" value=""
                                       size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                      aria-required="true" aria-invalid="false" placeholder="Full Name" /></span>
+                                      aria-required="true" aria-invalid="false" required placeholder="Full Name" /></span>
                                 </div>
                                 <div class="contact_col">
                                   <span class="wpcf7-form-control-wrap Email"><input type="email" name="Email" value=""
                                       size="40"
                                       class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                                      aria-required="true" aria-invalid="false" placeholder="Email" /></span>
+                                      aria-required="true" aria-invalid="false" required placeholder="Email" /></span>
                                 </div>
                                 <div class="contact_col">
                                   <span class="wpcf7-form-control-wrap Phone"><input type="tel" name="Phone" value=""
                                       size="40"
                                       class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel"
-                                      aria-required="true" aria-invalid="false" placeholder="Phone" /></span>
+                                      aria-required="true" aria-invalid="false" required placeholder="Phone" /></span>
                                 </div>
                                 <div class="contact_col">
                                   <span class="wpcf7-form-control-wrap Company"><input type="text" name="Company"
                                       value="" size="40"
                                       class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                      aria-required="true" aria-invalid="false" placeholder="Company" /></span>
+                                      aria-required="true" aria-invalid="false" required placeholder="Company" /></span>
                                 </div>
                                 <div class="contact_col_2">
                                   <span class="wpcf7-form-control-wrap noidung"><textarea name="noidung" cols="40"
@@ -128,6 +121,33 @@
     </div>
   </div>
   <%- include('../partial/bodyAssets.ejs') %>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    ( function( $ ) {
+      emailjs.init("b7L3OdbZdzVMynV5Z");
+      $('.custom-contact-form').on('submit', function(e) {
+        e.preventDefault();
+        if($('.custom-contact-form')[0].checkValidity()) {
+          emailjs.send('service_vt1acs9', 'template_mkibgp7', {
+            from_name: $('[name="Name"]').val(),
+            email: $('[name="Email"]').val(),
+            phone: $('[name="Phone"]').val(),
+            company: $('[name="Company"]').val(),
+            message: $('[name="noidung"]').val()
+          }, "b7L3OdbZdzVMynV5Z").then(function(response) {
+            alert('Succesfully sent message. Thank you!!!');
+            $('[name="Name"]').val("");
+            $('[name="Email"]').val("");
+            $('[name="Phone"]').val("");
+            $('[name="Company"]').val("");
+            $('[name="noidung"]').val("");
+          }, function(error) {
+            alert('Error!!! Failed to send email.')
+          });
+        }
+      });
+    } )( jQuery );
+  </script>
 </body>
 
 </html>
