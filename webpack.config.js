@@ -61,7 +61,7 @@ module.exports = {
       'tin-tuc/dieu-chinh-che-do-dinh-duong-cho-heo-nai',
       'tin-tuc/kiem-soat-gia-tri-dem-trong-thuc-an-heo-con',
       'tin-tuc/kiem-soat-chat-luong-thuc-an-chan-nuoi',
-      'bds/vinhomes-golden-avenue-mong-cai'
+      'bds/minh-anh-park-hill-cu-chi'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/${page}.ejs`,
