@@ -17677,11 +17677,6 @@ body ul.wpb_thumbnails-fluid li:before {
   z-index: 10
 }
 
-.landing-page-holding,
-.landing-page-holding * {
-  box-sizing: border-box;
-}
-
 .row,.gallery {
   width: 100%;
   -js-display: flex;
