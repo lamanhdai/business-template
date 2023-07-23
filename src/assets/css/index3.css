@@ -853,7 +853,7 @@ footer #lang_sel_click ul ul a:visited {
     display: table-cell;
     position: relative;
     top: auto;
-    vertical-align: middle
+    vertical-align: middle;
   }
 
   .q_logo a {
