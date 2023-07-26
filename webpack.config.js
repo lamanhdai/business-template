@@ -83,7 +83,9 @@ module.exports = {
       'product/san-pham-dung-cho-trang-trai-en',
       'project',
       'news/6-buoc-trong-lap-cong-thuc-thuc-an-chan-nuoi-en',
-      'news/co-the-cat-giam-hoac-thay-the-vitamin-e-trong-thuc-an-chan-nuoi-en'
+      'news/co-the-cat-giam-hoac-thay-the-vitamin-e-trong-thuc-an-chan-nuoi-en',
+      'news/dieu-chinh-che-do-dinh-duong-cho-heo-nai-en',
+      'news/kiem-soat-chat-luong-thuc-an-chan-nuoi-en'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/en/${page}.ejs`,

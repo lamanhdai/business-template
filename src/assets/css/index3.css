@@ -24835,19 +24835,19 @@ body p {
   text-transform: uppercase;
 }
 
-.post_content_vietacc {
+.post_content_minhanh {
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 50px;
   padding-bottom: 30px;
 }
 
-.post_content_vietacc h3 {
+.post_content_minhanh h3 {
   font-size: 25px;
   text-align: center;
 }
 
-.post_content_vietacc .time_date {
+.post_content_minhanh .time_date {
   text-align: center;
   margin-bottom: 30px;
 }
@@ -25061,7 +25061,7 @@ body p {
     text-align: justify;
   }
 
-  .post_content_vietacc h3 {
+  .post_content_minhanh h3 {
     font-size: 18px;
     text-align: center;
   }
@@ -25544,7 +25544,7 @@ body p {
     object-fit: cover;
   }
 
-  .post_content_vietacc {
+  .post_content_minhanh {
     max-width: 90%;
   }
 
