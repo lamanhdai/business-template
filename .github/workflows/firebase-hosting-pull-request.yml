@@ -26,7 +26,7 @@ jobs:
     - name: Upload ftp
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ${{ secrets.HOST_NAME }}
+        server: ${{ secrets.HOST_IP }}
         username: ${{ secrets.USERNAME }}
         port: "21"
         password: ${{ secrets.PASSWORD }}
