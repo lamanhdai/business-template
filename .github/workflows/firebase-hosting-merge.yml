@@ -19,3 +19,19 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CALENDAR_TEST_2_5D1D4 }}'
           channelId: live
           projectId: calendar-test-2-5d1d4
+  FTP-Deploy-Action:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: npm install
+    - run: npm run build
+    - name: Upload ftp
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.HOST_NAME }}
+        username: ${{ secrets.USERNAME }}
+        port: "21"
+        password: ${{ secrets.PASSWORD }}
+        local-dir: "public"
+        server-dir: "public_html"
