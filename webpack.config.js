@@ -85,7 +85,8 @@ module.exports = {
       'news/6-buoc-trong-lap-cong-thuc-thuc-an-chan-nuoi-en',
       'news/co-the-cat-giam-hoac-thay-the-vitamin-e-trong-thuc-an-chan-nuoi-en',
       'news/dieu-chinh-che-do-dinh-duong-cho-heo-nai-en',
-      'news/kiem-soat-chat-luong-thuc-an-chan-nuoi-en'
+      'news/kiem-soat-chat-luong-thuc-an-chan-nuoi-en',
+      'news/kiem-soat-gia-tri-dem-trong-thuc-an-heo-con-en'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/en/${page}.ejs`,
