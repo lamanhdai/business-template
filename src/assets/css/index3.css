@@ -25652,6 +25652,9 @@ body p {
     font-size: 22px;
     margin-left: 0;
   }
+  :lang(en-US) .company-name {
+    font-size: 21px;
+  }
 }
 
 .row {
