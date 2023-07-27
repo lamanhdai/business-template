@@ -16,17 +16,17 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CALENDAR_TEST_2_5D1D4 }}'
           projectId: calendar-test-2-5d1d4
-  web-deploy:
-    name: 🎉 Deploy
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-    - name: Get latest code
-      uses: actions/checkout@v3
-    
-    - name: Sync files
-      uses: minhanhxnk/ftp-deployment-action@latest
+    - uses: actions/checkout@v2.1.0
       with:
-        server: '${{ secrets.HOST_NAME }}'
-        username: '${{ secrets.USERNAME }}'
-        password: '${{ secrets.PASSWORD }}'
-        local_dir: "./public_html"
+        fetch-depth: 2
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@master
+      with:
+        ftp-server: ${{ secrets.HOST_NAME }}
+        ftp-username: ${{ secrets.USERNAME }}
+        ftp-password: ${{ secrets.PASSWORD }}
+        local-dir: "./"
