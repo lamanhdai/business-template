@@ -35,3 +35,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         local-dir: "public/"
         server-dir: "public_html/"
+
