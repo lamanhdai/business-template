@@ -16,3 +16,15 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CALENDAR_TEST_2_5D1D4 }}'
           projectId: calendar-test-2-5d1d4
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v3
+    
+    - name: Sync files
+      with:
+        server: '${{ secrets.HOST_NAME }}'
+        username: '${{ secrets.USERNAME }}'
+        password: '${{ secrets.PASSWORD }}'
