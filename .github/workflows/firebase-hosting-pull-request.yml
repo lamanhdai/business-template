@@ -26,7 +26,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@master
       with:
-        server: ${{ secrets.HOST_NAME }}
+        server: ${{ secrets.HOST_IP }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         local-dir: "./"
