@@ -24,10 +24,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - run: npm install
+    - run: npm run build
     - name: Upload ftp
       uses: sebastianpopp/ftp-action@releases/v2
       with:
-        server: ${{ secrets.HOST_IP }}
+        host: ${{ secrets.HOST_NAME }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        local-dir: "./"
+        localDir: "public"
