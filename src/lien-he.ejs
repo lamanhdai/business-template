@@ -128,9 +128,10 @@
       emailjs.init("b7L3OdbZdzVMynV5Z");
       $('.custom-contact-form').on('submit', function(e) {
         e.preventDefault();
+        var title = "From minhanhxnk website - Liên hệ : ";
         if($('.custom-contact-form')[0].checkValidity()) {
           emailjs.send('service_vt1acs9', 'template_mkibgp7', {
-            from_name: $('[name="Name"]').val(),
+            from_name: title + $('[name="Name"]').val(),
             email: $('[name="Email"]').val(),
             phone: $('[name="Phone"]').val(),
             company: $('[name="Company"]').val(),
