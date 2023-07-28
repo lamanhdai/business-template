@@ -16,27 +16,56 @@ module.exports = {
     hot: false,
     liveReload: true
   },
+  resolve: {
+    alias: {
+      '/assets': path.resolve(__dirname, 'src/assets/'),
+    },
+  },
   output: {
     path: path.resolve(__dirname, 'public'),
-    // use when line 37 removed
-    // assetModuleFilename: (pathData) => {
-    //   const filepath = path
-    //     .dirname(pathData.filename)
-    //     .split("/")
-    //     .slice(1)
-    //     .join("/");
-    //   return `${filepath}/[name][ext][query]`;
-    // },
+    publicPath: `/`,
+    // enable
+    assetModuleFilename: (pathData) => {
+      const filepath = path
+        .dirname(pathData.filename)
+        .split("/")
+        .slice(1)
+        .join("/");
+      const timeStamp = new Date().getTime();
+      return `${filepath}/[name][ext]?v=${timeStamp}`;
+    },
   },
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        loader: 'html-loader'
+      },
+      {
         test: /\.ejs$/i,
         loader: 'html-loader',
         options: {
-          sources: false,
+          // sources: false,
+          sources: {
+            list: [
+              {
+                attribute: "content",
+                type: "src",
+                filter: (tag, attribute, attributes, resourcePath) => {
+                  return tag.toLowerCase() !== "meta" && tag.toLowerCase() !== "img";
+                },
+              },
+              {
+                attribute: "src",
+                type: "src",
+                filter: (tag, attribute, attributes, resourcePath) => {
+                  return tag.toLowerCase() !== "meta";
+                },
+              }
+            ],
+          },
         },
-      },{
+      }, {
         test: /\.ejs$/i,
         loader: 'template-ejs-loader',
       }],

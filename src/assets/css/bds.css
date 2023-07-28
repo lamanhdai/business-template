@@ -620,7 +620,13 @@
   line-height: 35px;
   text-align: center;
   padding: 0;
-  margin-bottom: 15px
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .title_header {
+    margin-top: 50px;
+  }
 }
 
 .br_line {
@@ -2552,4 +2558,40 @@ itrans-01,.itrans-02,.itrans-03,.itrans-04,.itrans-05 {
 .img .img-inner {
   position: relative;
   overflow: hidden
+}
+
+.page-project .project-list {
+  padding: 0 30px;
+}
+
+@media (min-width: 768px) {
+  .page-project .project-list {
+    margin: 0 -15px;
+    padding: 0;
+  }
+}
+
+.page-project .project-layout {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.page-project .project-layout .col-xs-12 {
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .page-project .project-layout {
+    margin: 0 -15px;
+  }
+  .page-project .project-layout .col-xs-12 {
+    padding: 0 15px;
+  }
+}
+
+.project-detail {
+  margin: 30px 0;
+}
+.project-detail .grid_section .section_inner {
+  max-width: 860px;
 }
