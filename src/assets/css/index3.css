@@ -854,6 +854,7 @@ footer #lang_sel_click ul ul a:visited {
     position: relative;
     top: auto;
     vertical-align: middle;
+    margin-top: 5px;
   }
 
   .q_logo a {
