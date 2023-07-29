@@ -115,7 +115,8 @@ module.exports = {
       'news/co-the-cat-giam-hoac-thay-the-vitamin-e-trong-thuc-an-chan-nuoi-en',
       'news/dieu-chinh-che-do-dinh-duong-cho-heo-nai-en',
       'news/kiem-soat-chat-luong-thuc-an-chan-nuoi-en',
-      'news/kiem-soat-gia-tri-dem-trong-thuc-an-heo-con-en'
+      'news/kiem-soat-gia-tri-dem-trong-thuc-an-heo-con-en',
+      'projectdetail/minh-anh-park-hill-cu-chi-en'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/en/${page}.ejs`,
