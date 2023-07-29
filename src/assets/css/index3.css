@@ -23604,6 +23604,13 @@ body p {
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .header_bottom_right_widget_holder .custom-html-widget ul li {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 .header_bottom_right_widget_holder .custom-html-widget ul li:before {
   content: "";
   position: absolute;
@@ -23627,10 +23634,16 @@ body p {
 .header_bottom_right_widget_holder .widget_polylang ul li {
   display: inline-block;
   list-style: none;
-  line-height: 80px;
+  line-height: 60px;
   padding-right: 30px;
   padding-left: 30px;
   position: relative;
+}
+
+@media (min-width: 1000px) {
+  .header_bottom_right_widget_holder .widget_polylang ul li {
+    line-height: 80px;
+  }
 }
 
 .header_bottom_right_widget_holder .widget_polylang ul li:before {
@@ -24962,7 +24975,7 @@ body p {
   }
 
   .mobile_menu_button {
-    height: 80px;
+    height: 60px;
     float: right;
     margin-right: 15px
   }
@@ -25000,7 +25013,7 @@ body p {
 
   .q_logo a {
     height: 50px !important;
-    left: 15px;
+    left: 0;
   }
 
   .header_bottom .container_inner {
@@ -25643,13 +25656,14 @@ body p {
   background: -webkit-linear-gradient(#f7e88a, #7a5116);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-left: 15px;
+  margin-top: 18px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .company-name {
     font-size: 22px;
     margin-left: 0;
+    margin-top: 0;
   }
   :lang(en-US) .company-name {
     font-size: 21px;
@@ -26513,5 +26527,16 @@ body p {
 
   .col-lg-offset-0 {
       margin-left: 0
+  }
+}
+
+.company-text {
+  display: inline-block;
+  line-height: 60px;
+}
+
+@media (min-width: 1000px) {
+  .company-text {
+    line-height: 110px;
   }
 }
