@@ -24823,11 +24823,11 @@ body p {
   background: #fff;
 }
 
-.post_detail_vietacc .banner_post .img_post img {
+.post_detail_minhanh .banner_post .img_post img {
   display: block;
 }
 
-.post_detail_vietacc .banner_post {
+.post_detail_minhanh .banner_post {
   position: relative;
 }
 
@@ -25550,7 +25550,7 @@ body p {
     margin-bottom: 15px;
   }
 
-  .post_detail_vietacc .banner_post .img_post img {
+  .post_detail_minhanh .banner_post .img_post img {
     display: block;
     height: 200px;
     object-fit: cover;
