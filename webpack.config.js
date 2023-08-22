@@ -90,7 +90,8 @@ module.exports = {
       'tin-tuc/dieu-chinh-che-do-dinh-duong-cho-heo-nai',
       'tin-tuc/kiem-soat-gia-tri-dem-trong-thuc-an-heo-con',
       'tin-tuc/kiem-soat-chat-luong-thuc-an-chan-nuoi',
-      'bds/minh-anh-park-hill-cu-chi'
+      'bds/minh-anh-park-hill-cu-chi',
+      'thanh-toan'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/${page}.ejs`,
@@ -116,7 +117,8 @@ module.exports = {
       'news/dieu-chinh-che-do-dinh-duong-cho-heo-nai-en',
       'news/kiem-soat-chat-luong-thuc-an-chan-nuoi-en',
       'news/kiem-soat-gia-tri-dem-trong-thuc-an-heo-con-en',
-      'projectdetail/minh-anh-park-hill-cu-chi-en'
+      'projectdetail/minh-anh-park-hill-cu-chi-en',
+      'payment'
     ].map(page => {
       return new HtmlWebpackPlugin({
         template: `src/en/${page}.ejs`,
