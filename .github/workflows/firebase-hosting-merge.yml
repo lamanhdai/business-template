@@ -39,5 +39,5 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         local-dir: "public/"
         server-dir: "public_html/"
-        timeout: 60000
+        timeout: 300000
 
