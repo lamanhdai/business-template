@@ -24,10 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js 22
-      uses: actions/setup-node@v2
+    - name: Use Node.js 20
+      uses: actions/setup-node@v4
       with:
-        node-version: '22'
+        node-version: '20'
     - run: npm install
     - run: npm run build
     - name: Upload ftp
@@ -39,5 +39,3 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         local-dir: "public/"
         server-dir: "public_html/"
-        timeout: 300000
-
